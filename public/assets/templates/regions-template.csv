@@ -1,0 +1,2 @@
+id,name,planet,siteType,kind,lat,lon,tempMean,tempMin,tempMax,elevation,slope,aridity,terrain,geology,minerals,provenance,source,summary
+example-region,Example region,mars,landing,Crater floor,18.4,77.5,-55,-90,-20,-2600,6,0,impact_crater=0.9|rocky_regolith=0.6,basalt=0.8|clay_carbonate=0.4,olivine=0.5|pyroxene=0.4,derived,Your dataset name,"One sentence about the region"

@@ -1,0 +1,12 @@
+/* Ported from Angular component styles. Scoped by the .c-loading wrapper (replaces view encapsulation). */
+@keyframes spin { to { transform: rotate(360deg); } }
+.c-loading {
+.ls { position: fixed; inset: 0; z-index: 200; display: grid; place-content: center; justify-items: center; gap: 14px; background: var(--deep);
+      transition: opacity .7s var(--ease), visibility .7s; }
+    .ls.done { opacity: 0; visibility: hidden; pointer-events: none; }
+    .orb { position: relative; width: 84px; height: 84px; margin-bottom: 10px;
+      i { position: absolute; inset: 0; border-radius: 50%; border: 1px solid var(--line-strong); }
+      i:nth-child(2) { inset: 14px; border-color: var(--cyan); border-inline-end-color: transparent; animation: spin 1.4s linear infinite; }
+      b { position: absolute; left: 50%; top: 50%; width: 6px; height: 6px; margin: -3px; border-radius: 50%; background: var(--white); } }
+    p { font-size: .78rem; color: var(--white); } .sub { color: var(--gray); font-size: .68rem; }
+}

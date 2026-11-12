@@ -1,0 +1,11 @@
+/* Ported from Angular component styles. Scoped by the .c-footer wrapper (replaces view encapsulation). */
+.c-footer {
+.foot { border-top: 1px solid var(--line); padding: 56px 0 40px; background: var(--deep); position: relative; z-index: 2; }
+    .grid { display: grid; grid-template-columns: 1.3fr 1fr 1.2fr; gap: 40px; align-items: start; }
+    .logo img { height: 52px; width: auto; display: block; }
+    .logo { font-family: var(--font-display); font-weight: 600; letter-spacing: .14em; font-size: .9rem; span { color: var(--cyan); margin: 0 .3em; } }
+    .note { max-width: 44ch; margin-top: 12px; }
+    nav { display: grid; gap: 8px; a { text-decoration: none; color: var(--text-soft); width: fit-content; &:hover { color: var(--cyan); } } }
+    .data { font-size: .7rem; color: var(--gray); line-height: 1.7; }
+    @media (max-width: 800px) { .grid { grid-template-columns: 1fr; gap: 28px; } }
+}

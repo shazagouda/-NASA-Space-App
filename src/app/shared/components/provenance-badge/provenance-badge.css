@@ -1,0 +1,7 @@
+/* Ported from Angular component styles. Scoped by the .c-prov wrapper (replaces view encapsulation). */
+.c-prov {
+.b { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: .68rem; color: var(--pc); white-space: nowrap; line-height: 1; }
+    i { width: 6px; height: 6px; border-radius: 50%; background: var(--pc); flex: none; }
+    .prov-simulated i { background: transparent; border: 1px solid var(--pc); }
+    .prov-unavailable i { background: transparent; border: 1px dashed var(--pc); }
+}

@@ -1,0 +1,14 @@
+/* Ported from Angular component styles. Scoped by the .c-toasts wrapper (replaces view encapsulation). */
+@keyframes tin { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.c-toasts {
+.toasts { position: fixed; z-index: 150; right: var(--gutter); bottom: 20px; display: grid; gap: 10px; width: min(380px, calc(100vw - 2 * var(--gutter))); pointer-events: none; }
+    .toast { pointer-events: auto; display: grid; grid-template-columns: 4px 1fr auto; gap: 12px; padding-block: 14px 14px; padding-inline: 0 12px; background: #0b1424; border: 1px solid var(--line); box-shadow: 0 16px 40px rgba(0,0,0,.45);
+      animation: tin .28s var(--ease);
+      i { background: var(--cyan); align-self: stretch; } strong { font-size: .88rem; } p { margin: 3px 0 0; color: var(--text-soft); font-size: .82rem; line-height: 1.45; }
+      a { display: inline-block; margin-top: 6px; color: var(--cyan); font-size: .8rem; }
+      button { background: none; border: 0; color: var(--gray); font-size: 1.2rem; line-height: 1; cursor: pointer; align-self: start; padding: 0 4px; &:hover { color: var(--white); } }
+      &.success i { background: #4ade80; } &.warning i { background: #f5b84b; } &.error i { background: #ff6b6b; } }
+    
+    @media (prefers-reduced-motion: reduce) { .toast { animation: none; } }
+    @media (max-width: 640px) { .toasts { bottom: 76px; } }
+}

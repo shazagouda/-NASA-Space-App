@@ -1,0 +1,9 @@
+/* Ported from Angular component styles. Scoped by the .c-tip wrapper (replaces view encapsulation). */
+.c-tip {
+.wrap { position: relative; display: inline; }
+    .term { border-bottom: 1px dotted var(--gray); cursor: help; }
+    .tip { position: absolute; left: 50%; bottom: calc(100% + 8px); transform: translate(-50%, 4px); width: max-content; max-width: 260px; padding: 10px 12px;
+      background: var(--surface); border: 1px solid var(--line-strong); color: var(--white); font: 400 .78rem/1.45 var(--font-ui); letter-spacing: 0; text-transform: none; text-align: start;
+      opacity: 0; pointer-events: none; transition: opacity .18s, transform .18s; z-index: 40; }
+    .wrap:hover .tip, .term:focus + .tip { opacity: 1; transform: translate(-50%, 0); }
+}

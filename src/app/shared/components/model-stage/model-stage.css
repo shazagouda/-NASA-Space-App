@@ -1,0 +1,8 @@
+/* Ported from Angular component styles. Scoped by the .c-stage wrapper (replaces view encapsulation). */
+.c-stage {
+& { display: block; width: 100%; height: 100%; position: relative; }
+    .s { position: absolute; inset: 0; touch-action: pan-y; cursor: grab; &:active { cursor: grabbing; } }
+    canvas { width: 100%; height: 100%; }
+    .st { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: 10px; text-align: center; font-size: .75rem; color: var(--gray); }
+    .bar { width: 140px; height: 2px; background: var(--line); i { display: block; height: 100%; background: var(--cyan); transition: width .3s; } }
+}

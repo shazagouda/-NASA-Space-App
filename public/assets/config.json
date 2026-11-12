@@ -1,0 +1,9 @@
+{
+  "mode": "offline",
+  "apiBaseUrl": "",
+  "endpoints": { "regions": "/regions", "analogs": "/analogs", "search": "/analogs/search", "assistant": "/assistant", "health": "/health" },
+  "layerRasters": {},
+  "timeoutMs": 8000,
+  "retries": 1,
+  "maxImportKb": 2048
+}

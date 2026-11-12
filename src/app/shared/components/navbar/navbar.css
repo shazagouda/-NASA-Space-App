@@ -1,0 +1,30 @@
+/* Ported from Angular component styles. Scoped by the .c-navbar wrapper (replaces view encapsulation). */
+.c-navbar {
+.nav { position: fixed; z-index: 60; top: 0; left: 0; right: 0; height: var(--nav-h); display: flex; align-items: center; justify-content: space-between;
+      padding: 0 var(--gutter); transition: background .4s, border-color .4s, backdrop-filter .4s; border-bottom: 1px solid transparent; }
+    .nav.solid, .nav.open { background: rgba(var(--deep-rgb), .82); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-color: var(--line); }
+    .logo { text-decoration: none; font-family: var(--font-display); font-weight: 600; letter-spacing: .16em; font-size: .92rem; white-space: nowrap;
+      span { color: var(--cyan); margin: 0 .35em; font-weight: 400; } }
+    nav { display: flex; align-items: center; gap: clamp(16px, 2.6vw, 36px);
+      a:not(.btn) { text-decoration: none; font-size: .9rem; color: var(--text-soft); padding: 6px 0; position: relative; transition: color .2s;
+        &::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--cyan); transform: scaleX(0); transform-origin: left; transition: transform .35s var(--ease); }
+        &:hover, &.on { color: var(--white); } &:hover::after, &.on::after { transform: scaleX(1); } } }
+    .cta { margin-inline-start: 8px; }
+    .logo { margin-inline-end: auto; display: inline-flex; align-items: center; img { height: 44px; width: auto; display: block; } }
+    .tools { margin-inline-start: clamp(10px, 2vw, 22px); display: flex; gap: 8px; align-items: center; }
+    .ask { height: 40px; display: inline-flex; align-items: center; gap: 8px; padding: 0 14px; border: 1px solid var(--line); background: transparent; color: var(--white); font-size: .82rem; cursor: pointer; i { width: 7px; height: 7px; border-radius: 50%; background: var(--cyan); } &:hover, &[aria-expanded='true'] { border-color: var(--cyan); } }
+    .burger { display: none; width: 44px; height: 44px; border: 0; background: none; position: relative; margin-inline-end: -10px;
+      i { position: absolute; left: 11px; right: 11px; height: 1.5px; background: var(--white); transition: transform .3s var(--ease), top .3s; }
+      i:nth-of-type(1) { top: 17px; } i:nth-of-type(2) { top: 25px; } }
+    .open .burger i:nth-of-type(1) { top: 21px; transform: rotate(45deg); } .open .burger i:nth-of-type(2) { top: 21px; transform: rotate(-45deg); }
+    .seg { display: inline-flex; height: 40px; border: 1px solid var(--line); button { min-width: 40px; padding: 0 10px; display: inline-flex; align-items: center; justify-content: center; border: 0; background: transparent; color: var(--gray); font: 500 .74rem var(--font-mono); cursor: pointer; transition: background .2s, color .2s; &:hover { color: var(--white); } &.on { background: var(--cyan); color: var(--btn-fg); } } button + button { border-inline-start: 1px solid var(--line); } }
+    .seg button[lang='ar'] { font-family: 'Segoe UI', Tahoma, 'Noto Sans Arabic', var(--font-ui); font-size: .82rem; }
+    @media (max-width: 860px) {
+      .burger { display: block; }
+      .tools { margin-inline-start: auto; gap: 6px; } .seg { height: 36px; } .seg button { min-width: 34px; padding: 0 7px; } .ask span { display: none; } .ask { padding: 0 13px; }
+      nav { position: fixed; top: var(--nav-h); left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: 8px var(--gutter) 24px;
+        background: rgba(var(--deep-rgb), .96); border-bottom: 1px solid var(--line); transform: translateY(-8px); opacity: 0; visibility: hidden; transition: all .3s var(--ease);
+        a:not(.btn) { padding: 16px 0; border-bottom: 1px solid var(--line); font-size: 1.05rem; } .cta { margin: 20px 0 0; } }
+      .open nav { transform: none; opacity: 1; visibility: visible; }
+    }
+}

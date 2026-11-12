@@ -1,0 +1,16 @@
+/* Ported from Angular component styles. Scoped by the .c-journey wrapper (replaces view encapsulation). */
+.c-journey {
+.rail { position: fixed; z-index: 55; top: var(--nav-h); left: 0; right: 0; height: 44px; display: flex; align-items: center; justify-content: space-between; gap: 24px;
+      padding: 0 var(--gutter); background: rgba(var(--deep-rgb), .55); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); border-top: 1px solid var(--line); }
+    ol { display: flex; gap: clamp(10px, 2vw, 28px); list-style: none; margin: 0; padding: 0; overflow-x: auto; scrollbar-width: none; &::-webkit-scrollbar { display: none; } }
+    li { flex: none; }
+    .step { display: flex; align-items: center; gap: 8px; text-decoration: none; font-size: .8rem; color: var(--gray); white-space: nowrap; padding: 4px 0; position: relative;
+      b { width: 20px; height: 20px; border-radius: 50%; border: 1px solid var(--line-strong); display: grid; place-items: center; font-size: .66rem; font-weight: 400; }
+      em { font-style: normal; } }
+    a.step:hover { color: var(--white); }
+    .done .step { color: var(--text-soft); b { background: var(--cyan); border-color: var(--cyan); color: var(--deep); } }
+    .cur .step { color: var(--white); b { border-color: var(--cyan); color: var(--cyan); box-shadow: 0 0 0 3px rgba(72,217,232,.14); } }
+    .lock .step { opacity: .45; cursor: not-allowed; }
+    .ctx { font-size: .72rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--white); }
+    @media (max-width: 900px) { .ctx { display: none; } .step em { display: none; } .cur .step em { display: inline; } }
+}

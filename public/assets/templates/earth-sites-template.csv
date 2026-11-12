@@ -1,0 +1,2 @@
+id,name,country,lat,lon,known,tempMean,tempMin,tempMax,elevation,slope,aridity,terrain,geology,minerals,provenance,source,blurb
+example-site,Example site,Chile,-24.1,-69.9,false,17,-5,35,2400,4,0.002,evaporite_flat=0.8|rocky_regolith=0.6,sulfate_evaporite=0.8|iron_oxide_soil=0.5,sulfate=0.7|iron_oxide=0.5,derived,Your dataset name,"Why this place is a candidate"

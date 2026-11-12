@@ -1,0 +1,20 @@
+/* Ported from Angular component styles. Scoped by the .c-notif wrapper (replaces view encapsulation). */
+.c-notif {
+& { position: relative; display: inline-flex; }
+    .bell { position: relative; width: 40px; height: 40px; display: grid; place-items: center; border: 1px solid var(--line); background: transparent; color: var(--white); cursor: pointer;
+      &:hover { border-color: var(--cyan); } }
+    .dot { position: absolute; top: -6px; right: -6px; min-width: 18px; height: 18px; padding: 0 4px; display: grid; place-items: center; background: var(--cyan); color: var(--btn-fg); font: 600 .66rem var(--font-mono); }
+    .panel { position: absolute; z-index: 140; top: 48px; right: 0; width: min(380px, calc(100vw - 2 * var(--gutter))); max-height: min(70vh, 520px); overflow: auto;
+      background: var(--surface); border: 1px solid var(--line); box-shadow: 0 24px 60px rgba(0,0,0,.5); }
+    header { display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; border-bottom: 1px solid var(--line); position: sticky; top: 0; background: var(--surface);
+      h2 { font: 600 .85rem var(--font-display); letter-spacing: .08em; text-transform: none; margin: 0; } div { display: flex; gap: 14px; } }
+    .link { background: none; border: 0; color: var(--cyan); font-size: .78rem; cursor: pointer; padding: 0; &:disabled { color: var(--gray); cursor: default; } }
+    .empty { padding: 28px 16px; color: var(--gray); font-size: .88rem; margin: 0; }
+    ul { list-style: none; margin: 0; padding: 0; }
+    li { display: grid; grid-template-columns: 8px 1fr; gap: 12px; padding: 14px 16px; border-bottom: 1px solid var(--line);
+      i { width: 8px; height: 8px; margin-top: 6px; border-radius: 50%; background: var(--gray); }
+      strong { font-size: .88rem; } p { margin: 3px 0 5px; color: var(--text-soft); font-size: .82rem; line-height: 1.45; }
+      span { font-size: .68rem; color: var(--gray); } a { color: var(--cyan); }
+      &.unread { background: rgba(72,217,232,.04); } }
+    .success i { background: #4ade80; } .warning i { background: #f5b84b; } .error i { background: #ff6b6b; } .info i { background: var(--cyan); }
+}

@@ -1,0 +1,3 @@
+.skip { position: fixed; left: 12px; top: -60px; z-index: 300; background: var(--cyan); color: var(--btn-fg); padding: 10px 14px; &:focus { top: 12px; } }
+    .route-bar { position: fixed; z-index: 120; top: 0; left: 0; right: 0; height: 2px; opacity: 0; transition: opacity .3s; i { display: block; height: 100%; width: 40%; background: var(--cyan); animation: slide 1s infinite var(--ease); } &.on { opacity: 1; } }
+    @keyframes slide { from { transform: translateX(-100%); } to { transform: translateX(260%); } }

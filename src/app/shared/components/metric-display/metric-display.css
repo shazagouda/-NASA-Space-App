@@ -1,0 +1,6 @@
+/* Ported from Angular component styles. Scoped by the .c-metric wrapper (replaces view encapsulation). */
+.c-metric {
+& { display: inline-flex; align-items: baseline; gap: .35em; font-variant-numeric: tabular-nums; }
+    .v { font-size: 1em; color: var(--white); }
+    .u { font-size: .62em; color: var(--gray); }
+}

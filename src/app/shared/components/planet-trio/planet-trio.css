@@ -1,0 +1,6 @@
+.c-trio { position: absolute; inset: 0; }
+.c-trio canvas { width: 100%; height: 100%; display: block; opacity: 0; transition: opacity 1.4s var(--ease); }
+.c-trio.ready canvas { opacity: 1; }
+.c-trio .st { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; font-size: .8rem; color: var(--gray); }
+.c-trio .bar { width: 120px; height: 2px; background: var(--line); }
+.c-trio .bar i { display: block; height: 100%; background: var(--gray); transition: width .3s; }

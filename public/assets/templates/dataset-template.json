@@ -1,0 +1,48 @@
+{
+  "regions": [
+    {
+      "id": "example-region",
+      "planet": "mars",
+      "siteType": "landing",
+      "name": "Example region",
+      "kind": "Crater floor",
+      "lat": 18.4,
+      "lon": 77.5,
+      "featureSizeKm": 45,
+      "summary": "One or two sentences describing the region.",
+      "fingerprint": {
+        "tempMean": { "value": -55, "unit": "°C", "provenance": "derived", "source": "Your dataset name", "confidence": 0.8 },
+        "tempMin": { "value": -90, "provenance": "derived", "source": "Your dataset name", "confidence": 0.8 },
+        "tempMax": { "value": -20, "provenance": "derived", "source": "Your dataset name", "confidence": 0.8 },
+        "elevation": { "value": -2600, "provenance": "verified", "source": "MOLA" },
+        "slope": null,
+        "aridity": { "value": 0, "provenance": "derived", "source": "Airless / no liquid water" },
+        "terrain": { "value": { "impact_crater": 0.9, "rocky_regolith": 0.6 }, "provenance": "derived", "source": "Your dataset name" },
+        "geology": { "value": { "basalt": 0.8, "clay_carbonate": 0.4 }, "provenance": "derived", "source": "Your dataset name" },
+        "minerals": null,
+        "surfaceTraits": ["Rocky", "Dusty"]
+      }
+    }
+  ],
+  "analogs": [
+    {
+      "id": "example-site",
+      "name": "Example site",
+      "country": "Chile",
+      "lat": -24.1,
+      "lon": -69.9,
+      "known": false,
+      "blurb": "Why this place is a candidate.",
+      "researchUse": "How it has been used, if at all.",
+      "fingerprint": {
+        "tempMean": { "value": 17, "provenance": "derived", "source": "Your dataset name" },
+        "elevation": { "value": 2400, "provenance": "verified", "source": "SRTM" },
+        "slope": { "value": 4, "provenance": "derived", "source": "SRTM" },
+        "aridity": { "value": 0.002, "provenance": "derived", "source": "Your dataset name" },
+        "terrain": { "value": { "evaporite_flat": 0.8, "rocky_regolith": 0.6 }, "provenance": "derived" },
+        "geology": { "value": { "sulfate_evaporite": 0.8 }, "provenance": "derived" },
+        "minerals": null
+      }
+    }
+  ]
+}
